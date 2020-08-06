@@ -3,7 +3,6 @@ body{
 
     background-image: url("Banner.png");
     background-repeat: no-repeat;
-   
 
 }
 nav{
@@ -15,7 +14,7 @@ margin-top: 20px;
 
 .navbar{
     color: white;
-
+font-size: 130%;
 }
 .navbar-brand{
     color: white;
