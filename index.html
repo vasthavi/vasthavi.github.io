@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".chat").click(function () {
+				$(".cls").toggleClass("active");
+				$(".bird").toggleClass("active");
+			});
+			
+         
+		});
+	</script>
+</head>
+<body style="font-family: 'Montserrat', sans-serif;background-color: #7f8ac5 ">
+<nav class="navbar navbar-expand-lg navbar-fixed-top"   >
+	<a class="navbar-brand" href="#" style="font-size: 40px">Maxeon</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsive" style="padding: 0;border: none;outline: none;">
+			<span style="color: white;font-size: 50px" >&equiv;</span>
+		</button>
+    <div class="collapse navbar-collapse" id="collapsive">
+    	<ul class="navbar-nav " style="margin-left: auto;" >
+    		<li class="nav-link active">
+    			<a class="nav-item">Products</a>
+    		</li>
+    		<li class="nav-link">
+    			<a class="nav-item">Features</a>
+    		</li>
+    		<li class="nav-link">
+    			<a class="nav-item">User Cases</a>
+    		</li>
+    		<li class="nav-link">
+    			<a class="nav-item">Pricing</a> 
+    		</li>
+    		<li class="nav-link">
+    			<a class="nav-item">Login</a>
+    		</li>
+		</ul>
+	</div>
+</nav>
+
+<section>
+	<div class=" col-1 " style=" ">
+	<p class="banner" style="">Where words fail, music speaks.</p>
+</div>
+</section>
+
+<div class="container" style="margin-right:100px;">
+<div class="" id="id01" style="display: none">
+	<div class="modal-content animate shadow fixed-top" style="background-color: white;padding:10px;max-width:350px;margin-left:auto;margin-right: 100px;margin-top: 250px" >
+	<div class="container" style="background-color: #7f8ac5;padding:10px;border-radius: 5px">
+<h2 style="color: white;">Hi There </h2>
+<p style="font-weight: normal;">Ask Us Anything, Share Your Feedback.</p>
+	</div>
+	<div class="container" style=";padding:10px;">
+	<h6 style=";color: black">Start Your Conversation</h6>
+<p style="font-weight: normal;color:  #7f8ac5"> The team typically replies in a few minutes</p>
+</div>
+<div  class="container" style=";padding:10px;">
+	<button type="button" style="padding: 10px;background-color: #13a884;color: white;border:transparent;border-radius: 50px;outline: none;" onclick="document.getElementById('id02').style.display='block'">Start Conversation<i class="material-icons" style="padding-left: 10px">send</i></button>
+	</div>
+</div>
+</div>
+
+<div class="modal modal1" id="id02"  >
+	<div class="modal-dialog modal-content animate shadow chatbox" style="" >
+		<div class="container" style="background-color: #7f8ac5;padding:10px;border-radius: 5px">
+			<h2 style="color: white;">Hi There </h2>
+               <p style="font-weight: normal;">Ask Us Anything, Share Your Feedback.</p>
+		</div>
+		<div style="padding: 10px; background-color: #4c5aa1;margin-top: 30px;width:80%;margin-left: 65px">
+			<p style=" font-weight: normal;font-size: 12px">If there any offline versions available for Maxeon Player?</p>
+		</div>
+		<div style="padding: 10px;background-color: #ecf1fb;margin-top: 30px;width:80%">
+			<p style=" font-weight: normal;font-size: 12px;color:black ">Currently we don't have but we will launch soon</p>
+		</div>
+		<div class="mx-auto" style="font-size: 12px;text-align: center;margin-top: 100px;margin-bottom: 10px">
+<img src="sparrow favicon.PNG" style="width: 25px;height: 25px">
+			we run on survey sparrow
+		</div>
+		
+		<div style="background-color: white;">
+			<input type="text" name="message" style="font-size: 15px;width:auto;padding: 12px;border: none;outline:none;" placeholder="write a reply...">
+			<i class="material-icons" style="float: right;padding: 10px;color: #7f8ac5; ">send</i>
+		</div>
+	</div>
+</div>
+<div class="sparrow fixed-bottom" >
+<button type="button" class="shadow  chat"  onclick="document.getElementById('id01').style.display='block'" style="float: right;border:none;outline: none;background-color: white; padding:20px;border-radius: 50% 50% 5px 50% ;">
+<img class="bird" src="Sparrow Bird.PNG" style="" ><i class="material-icons cls">&#xe5cd;</i>
+</button>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+ var modal1 = document.getElementById('id02');
+
+    //when user clicks out the modal ,close it
+    window.onclick=function(event)
+    {
+        if (event.target == modal1) {
+            modal1.style.display = "none";
+        }
+    }
+
+</script>
+</body>
+</html>
