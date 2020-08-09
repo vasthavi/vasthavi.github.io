@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="main1.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymus"></script>
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".search").click(function () {
+				$(".clse").addClass("active");
+				$("input[type='text']").addClass("active");
+				 $(".search").removeClass("active");
+				 $(".searchbar").addClass("active");
+
+			});
+			$(".clse").click(function (){
+                  $("input[type='text']").removeClass("active");
+                  $(".clse").toggleClass("active");
+                   $(".search").removeClass("active");
+                   $(".searchbar").removeClass("active");
+			} );
+			$(".invi-search").click(function () {
+				$(".sm-clse").addClass("active");
+				$("input[type='texts']").addClass("active");
+				 $(".sm-search").toggleClass("active");
+				 $(".sm-srch").addClass("active");
+			});
+			$(".sm-clse").click(function (){
+                  $("input[type='texts']").removeClass("active");
+                  $(".sm-clse").toggleClass("active");
+                   $(".sm-search").removeClass("active");
+                   $(".sm-srch").toggleClass("active");
+
+			} );
+         
+		});
+	</script>
+</head>
+<body>
+	<header>
+	<nav class="navbar navbar-expand-lg  navbar-fixed-top  navbar-dark" style="background-color: #1F4172;color: white">
+		<a class="navbar-brand" href="#" style="margin-left: 100px;font-size: 130%;font-weight: bold;">LOGO</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" style="left: 0;position: absolute;top:0" >
+			<span class="navbar-toggler-icon" style="color: white;margin-top:10px" onclick="openNav();"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsive" style="margin-left: 100px">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link active" href="index.html">HOME</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link">SHOP</a>
+					<div class="dropdown-content " >
+						<ul style="display: flex">
+						    <li style="display: block"><h href="#">TOP WEAR</h>
+						        <a style="padding-top: 20px">shirts</a>
+						        <a href="tshirt.html">T-shirts</a>
+						        <a>Sweatshirts</a>
+						        <a>Dresses</a></li>
+							<li><h href="#">BOTTOM WEAR</h>
+								<a style="padding-top: 20px">Jeans</a>
+								<a >Casual Trousers</a>
+								<a>Formal Trousers</a>
+								<a>Shorts</a></li>
+							<li><h href="#">INDIAN WEAR</h>
+								<a style="padding-top: 20px">Kurtas & Suits</a>
+								<a>Ethnic Dresses</a>
+								<a>Sarees </a>
+								<a>Neharu Jacket</a>
+								<a>Sherwani</a></li>
+							<li><h href="#">SALE</h></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<ul class="navbar-nav" style="flex-direction: row;">
+			<li class="nav-item sm-search ">
+					<a class=" fa fa-search invi-search " style="padding-top: 18px"></a>
+				</li>
+				<li class="nav-item  searchbar">
+				<a class="nav-link fa fa-search search "style="padding-top: 18px" ></a><input type="text" placeholder="Search here..." >
+			<span class="fa fa-times clse"></span>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link fa fa-shopping-cart " style="padding-top: 18px" href="Bag.html"></a>
+				</li>
+				<li class="nav-item"  onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;display: flex" ><i class="fa fa-user-o nav-link" style=";cursor: pointer;padding-top: 18px;padding-right: 8px; "></i><a class="nav-link sign " style="padding-left: 0;">Sign in</a>
+				</li>
+			</ul>
+
+		<div id="myNavbar" class="sidenav">
+           <span href="javascript:void(0)" class="closebutton" onclick="closenav();">&times;</span>
+           <span  href="#" style="padding-left:100px;font-weight: bold;letter-spacing: 2px;color: #1F4172;;height: 50px;font-size: 25px;">LOGO</span>
+           <ul style="padding-top: 60px;padding-left: 0;">
+
+           <li class="active" style="border-top:1px solid #1f4172;" ><a href="index.html">HOME</a></li>
+
+			 <li >  <button onclick="openShop();" class="dropdown-btn" style="outline: none;">SHOP<i class="fa fa-caret-down" ></i> </button></li>
+			 <li ><a onclick="document.getElementById('id01').style.display='block' " style="color: #1F4172">LOGIN</a></li>
+				
+			   
+				<li><a href="#">TRACK ORDER</a></li>
+			  
+			</ul>
+		</div>
+
+		<div id="myShop" class="sidenav" style="transition: none">
+		<span href="javascript:void(0)" class="closearrow" style="" onclick="closeShop();">&leftarrow;</span>
+		<span style="padding-left:80px;padding-top: 50px;font-weight: bold;letter-spacing: 2px;height: 50px;font-size: 25px;color: #1F4172;">SHOP</span>
+		    <ul style="padding-top: 40px;padding-left: 0">
+
+			     <div class="dropdown">
+			           <button class="dropdown-btns  "  style="border-top:1px solid #1f4172;outline: none" onclick="myFunction1()">TOP WEAR<i class="fa fa-caret-down"></i>
+					   </button>
+			           <div class="dropdown-container" id="myDropdown1">
+				            <a href="#">Shirts</a>
+				            <a href="tshirt.html">T-shirts</a>
+				            <a href="#">Sweatshirts</a>
+				            <a href="#">Dresses</a>
+			           </div>
+					 
+					   <button class="dropdown-btns  " style="outline: none;" onclick="myFunction2()">BOTTOM WEAR<i class="fa fa-caret-down"></i> </button>
+				       <div class="dropdown-container" id="myDropdown2">
+					          <a href="#">Jeans</a>
+					          <a href="#">Formal Trousers</a>
+					          <a href="#">Casual Trousers</a>
+						   <a href="#">Shorts</a>
+					   </div>
+			         
+					    <button class="dropdown-btns  " style="outline: none;" onclick="myFunction3()">INDIAN WEAR<i class="fa fa-caret-down"></i> </button>
+				        <div class="dropdown-container" id="myDropdown3">
+					         <a href="#">Kurtas & Suits</a>
+					         <a href="#">Ethnic Dresses</a>
+					        <a href="#">Sarees</a>
+					         <a href="#">Neharu Jacket</a>
+							<a href="#">Sherwani</a>
+				        </div>
+					 
+					 <button class="dropdown-btns" style="outline: none;">SALE</button>
+		       	</div>
+			</ul>
+
+	</div>
+
+
+		<div class="modal " id="id01">
+	<div class="modal-dialog modal-content animate " style="margin-top: 50px;" >
+	<div class="tab" >
+		<button class="tablinks " onclick="openModal(event,'signin')" id="default">Sign in</button>
+		<button class="tablinks " onclick="openModal(event,'signup')" >Sign up</button>
+	</div>
+	<div id="signin" class="tabcontent" style="text-align: center">
+		<form action="#">
+			<input  type="Email" placeholder="Email" name="email" required>
+			<br>
+			<input type="password" name="psw" placeholder="Password" required>
+			<br>
+			<div style="text-align: right; padding-right: 15px;color: #1F4172;padding-bottom: 10px">
+				<a  href="#">Forgot Password?</a>
+			</div>
+
+			<button style="background:#1F4172;color: white;padding:5px 15px;border: none; " class="btn" type="submit">Sign in</button>
+
+		</form>
+		<div style="padding:20px;color:black;">
+			or
+		</div>
+		<button type="submit" class="btn" style="background-color:white;color: black;border-color: black;margin-bottom: 20px;padding: 7px "><img src="brands-and-logotypes.png " style="padding-left: 4px;padding-right: 8px">Login with google</button>
+	</div>
+	<div id="signup" class="tabcontent " style="text-align: center">
+		<form action="#">
+			<input type="text" placeholder="Name" name="name" required>
+			<br>
+			<input type="tel" placeholder="Mobile" name="Mobile" required>
+			<br>
+			<input type="Email" placeholder="Email" name="email" required>
+			<br>
+			<input type="password" name="psw" placeholder="Password" required>
+			<br>
+
+
+			<button style="background:#1F4172;color: white;padding:5px 15px;border: none;margin-top: 20px " class="btn" type="submit">Sign up</button>
+
+		</form>
+		<div style="padding:20px;color: black">
+			or
+		</div>
+		<button type="submit" class="btn" style="background-color:white;color: black;border-color: black;margin-bottom: 20px;padding: 5px "><img src="brands-and-logotypes.png " style="padding-left: 4px;padding-right: 8px">Login with google</button>
+	</div>
+	</div>
+</div>
+	</nav>
+</header>
+
+<div class="small-search">
+<span class="fa fa-search sm-srch"></span><input type="texts" placeholder="search here..."><span class="fa fa-times sm-clse"> </span>
+</div>
+
+	<!--------------Slidding section---------------->
+<section class="banner" style="background-color: #fdf8f7;">
+	<div class="slideshow-container " >
+		<div class="mySlides ">
+			<div class="container row " style="margin:0;padding-left: 0;color:#696969;">
+				<div class=" column" style="padding: 0;">
+				<img src="1.png" style="width: 200%; height: 100%">
+				</div>
+				<div class="content column" style="width: 25%;padding-left: 13vw;margin-top: 8vw;" >
+						<p class="sale" style="font-size:1.7vw;letter-spacing: 1.2vw">SALE UP TO</p>
+						<p class="percent" style="font-size: 10vw;left:12vw;line-height: 5vw;font-weight: bold;">70%</p>
+						<p class="off" style="font-size: 1.7vw;margin-left: 17vw">OFF</p>
+				</div>
+			</div>
+		</div>
+		<div class="mySlides ">
+			<div class="container " style="padding-left: 0;color:#696969;margin-bottom: 4.5px">
+				<img src="sale.png" style="width: 100%; height: 100%">
+			</div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+</section>
+
+
+
+<!---------------------section--------------->
+<section>
+	<div class=" service container-fluid" >
+		<div class="row" style="color: #696969" >
+			<div class="cols col-xl-4  col-md-4 col-sm col-xs mx-auto " style="text-align: center;cursor: pointer;">
+				<div class="boxes shadow p-1 mb-4 bg-white">
+				<span class="fa fa-truck" ></span><br>
+				<p>Free Delivery</p>
+			     </div>
+			</div>
+			<div class="cols col-xl-4  col-md-4 col-sm col-xs mx-auto" style="text-align: center;cursor: pointer;">
+				<div class=" boxes shadow p-1 mb-4 bg-white" >
+				<span class="fa fa-refresh" ></span><br>
+				<p>30 Days Exchange Policy</p>
+			    </div>
+			</div>
+
+			<div class="cols col-xl-4 col-md-4 col-sm col-xs mx-auto" style="text-align: center;cursor: pointer;">
+				<div class=" boxes shadow p-1 mb-4 bg-white">
+				<span class="fa fa-phone"></span><br>
+				<p>24 Hr Support</p>
+			    </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!------------------Images--------------->
+<section>
+
+	<div class="row full" style="width:100%;margin: 0;padding: 0">
+		<div class="col-lg-4 col-sm" style="padding: 0">
+			 <p style="" >NEW COLLECTION </p>
+			<img src="New collection1.png" href="#" >
+             <p style="" >CASUAL WEAR</p>
+			<img src="Casual wear1.png">
+		</div>
+		<div class="col-lg-4 col-sm" style="padding: 0">
+			<h6  >UNDER 599 STORE</h6>
+			<img src="Under 599 store1.png" >
+		</div>
+		<div class="col-lg-4 col-sm" style="padding: 0">
+			<p style="" >GRAPHIC TEES</p>
+			<img src="Graphic tees1.png" >
+<p style="" >PARTY WEAR</p>
+			<img src="Party wear1.png">
+
+		</div>
+	</div>
+	<div class="row small" style="width:100%;margin: 0;padding: 0">
+		<div class="col-sm " style="padding: 0">
+			 <p style="" >NEW COLLECTION </p>
+			<img src="New collection.png" href="#"  >
+             <p style="" >CASUAL WEAR</p>
+			<img src="Casual wear.png">
+		</div>
+		<div class="col-sm  " style="padding: 0">
+			<h6  >UNDER 599 STORE</h6>
+			<img src="Under 599 store.png" >
+		</div>
+		<div class="col-sm " style="padding: 0">
+			<p style="" >GRAPHIC TEES</p>
+			<img src="Graphic tee.png" >
+<p style="" >PARTY WEAR</p>
+			<img src="Party wear.png">
+
+		</div>
+	</div>
+</section>
+
+<!-------------------Registration with 25% off---------------->
+
+<div class=" reg">
+	<div class="register" >
+	<p ><b>Sign up and get <mark style="background-color: inherit;color:#FF6568">25% </mark>discount on<br> next offer</b></p>
+	</div>
+	<div class=" register1" >
+		<input type="text" placeholder="Your Email">
+		<button type="submit" >REGISTER</button>
+	</div>
+</div>
+
+
+<!----footer----------->
+<footer>
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3  col-xs-12 segment-one md-mb-30 sm-mb-30">
+					<a><h4 >OFFICE</h4></a>
+					#2, rrd 'C' Cross, 6th 'A' Main<br>
+					HRBR Layout,2nd Block<br>
+					Kalyana Nagara<br>
+					Bangalore 560043,India<br><br>
+					<b>T</b>:+91 80 27424977/00
+				</div>
+				<div class="col-md-3  col-xs-12 segment-two md-mb-30 sm-mb-30">
+				<a>	<h4>ABOUT</h4></a>
+					<ul class="footer-links">
+						<li><a href=" ">FAQ</a></li>
+						<li><a href=" ">Return Policy</a></li>
+						<li><a href=" ">Cancelation</a></li>
+						<li><a href=" ">Terms & Conditions</a></li>
+					</ul>
+				</div>
+				<div class=" col-md-3  col-xs-12 segment-three  md-mb-30 sm-mb-30">
+					<a><h4>CONTACT </h4></a>
+					<ul class="footer-links">
+						<li><a href=" ">Help Center</a></li>
+						<li><a href=" ">Customer Support</a></li>
+						<li><a href=" ">Store Locator</a></li>
+
+					</ul>
+				</div>
+				<div class=" col-md-3  col-xs-12 segment-four  md-mb-30 sm-mb-30">
+					<h4>KEEP IN TOUCH</h4>
+					<ul>
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-twitter"></a>
+						<a href="#" class="fa fa-instagram"></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+	<script type="text/javascript">
+		function openNav() {
+		document.getElementById('myNavbar').style.width='300px';
+
+	}
+	function closenav(){
+		document.getElementById('myNavbar').style.width='0';
+				
+	}
+		function openShop() {
+		document.getElementById('myNavbar').style.display="none";
+		document.getElementById('myShop').style.width='300px';
+
+	}
+	function closeShop(){
+		document.getElementById('myNavbar').style.display="block";
+		document.getElementById('myShop').style.width='0';
+	}
+
+
+//get modal
+    var modal = document.getElementById('id01');
+
+    //when user clicks out the modal ,close it
+    window.onclick=function(event)
+    {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+	function openModal(evt,formName){
+		var i,tabcontent,tablinks;
+		tabcontent=document.getElementsByClassName("tabcontent");
+		for(i=0;i<tabcontent.length;i++)
+		{
+			tabcontent[i].style.display="none";
+		}
+		tablinks=document.getElementsByClassName("tablinks")
+		for(i=0;i<tablinks.length;i++)
+		{
+			tablinks[i].className=tablinks[i].className.replace("active","");
+		}
+		document.getElementById(formName).style.display="block";
+		evt.currentTarget.className+="active";
+	}
+	document.getElementById("default").click();
+
+
+
+function myFunction1()
+	{
+		document.getElementById("myDropdown1").classList.toggle("show");
+
+	}
+	function myFunction2()
+	{
+		document.getElementById("myDropdown2").classList.toggle("show");
+	}
+	function myFunction3()
+	{
+		document.getElementById("myDropdown3").classList.toggle("show");
+	}
+
+
+var slideIndex=1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+	showSlides(slideIndex+=n);
+}
+function currentSlide(n) {
+	showSlides(slideIndex=n);
+}
+function showSlides(n) {
+	var i;
+	var slides=document.getElementsByClassName("mySlides");
+	var dot=document.getElementsByClassName("dot");
+	if(n>slides.length){slideIndex=1}
+	if (n<1){
+		slideIndex=slides.length;
+	}
+	for (i=0;i<slides.length;i++){
+		slides[i].style.display="none";
+	}
+	for(i=0;i<dot.length;i++){
+		dot[i].className=dot[i].className.replace("active","");
+	}
+	slides[slideIndex-1].style.display="block";
+	dot[slideIndex-1].className+="active";
+}
+
+
+	</script>
+</body>
+</html>
