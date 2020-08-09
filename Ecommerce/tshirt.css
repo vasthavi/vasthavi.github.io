@@ -9,6 +9,11 @@ a{
     cursor: pointer;
 }
                                 /*Hover dropdown contents*/
+ .container {
+  max-width: 960px;
+}
+
+.lh-condensed { line-height: 1.25; }
 
 
 .navbar-dark .navbar-nav .nav-link {
@@ -333,12 +338,6 @@ color: #1F4172;
     padding:0;
     margin: 0;
 }
-
-@media screen and (max-width: 575px){
-.sign{
-  display: 
-  none;
-}
 @media screen and (max-width: 675px){
 
     .invi-search {
@@ -414,6 +413,12 @@ color: #1F4172;
        font-size: 16px;
        right: 0;   
         transition: .3s ease-in-out; }
+}
+@media screen and (max-width: 575px){
+.sign{
+  display: 
+  none;
+}
 }
 @media screen and (min-width: 676px)
 {
